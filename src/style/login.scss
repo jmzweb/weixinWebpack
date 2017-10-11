@@ -1,0 +1,110 @@
+$margin:0.26rem;
+$color:#eb716f;
+$color1:#6ea2ec;
+.login{
+  position: relative;
+    margin:0.67rem-$margin 0;
+  ul{
+    margin:$margin 0;
+    li{
+      width:100%;
+      background:#fff;
+      border:1px solid #f6f6f6;
+      height:1rem;
+      overflow: hidden;
+      .info{
+        display: inline-block;
+        float:left;
+        width:10%;
+        height:1rem;
+        //border:1px solid red;
+        //box-sizing: border-box;
+        background: url("../images/input_icon.png") no-repeat 0.1rem 0;
+        background-size: 0.7rem 5rem;
+        &.info1{
+          background-position-y: -0.01rem;
+        }
+        &.info2{
+          background-position-y: -1rem;
+        }
+        &.info3{
+          background-position-y: -2rem;
+        }
+        &.info4{
+          background-position-y: -3rem;
+        }
+        &.info5{
+          background-position-y: -4rem;
+        }
+      }
+
+
+      input{
+        outline: none;
+        float:left;
+        display:inline-block;
+        width:80%;
+        line-height: 1rem;
+        //margin-top:2px;
+        //border:1px solid red;
+        padding:0 0.2rem;
+        font-size:17px;
+        color:rgba(0,0,0,.6);
+      }
+      &:first-child{
+        .getMsg{
+          font-size:15px;
+          line-height:.8rem;
+          color:$color1;
+          position: absolute;
+          top:5px;
+          right:.25rem;
+          z-index: 3;
+          background:rgba(255,255,255,.6);
+        }
+      }
+    }
+  }
+
+}
+.tip{
+  display: none;
+  position: fixed;
+  top:0.94rem;
+  left:0;
+  background:$color;
+  width:100%;
+  height:0.67rem-$margin;
+  line-height:0.67rem-$margin;
+
+  font-size:12px;
+  color:#fff;
+  text-align: center;
+}
+.btn-group{
+  width:100%;
+  text-align: center;
+  margin:1rem 0 0;
+  &.btn-not-position{
+    position: inherit;
+    bottom: inherit;
+  }
+  .btn{
+    width:90%;
+    line-height:$margin*4 ;
+    display: inline-block;
+    font-size:17px;
+    color:#fff;
+    background-color:$color1;
+    border-radius: 0.15rem;
+  }
+  .btn-small{
+    width:40%;
+  }
+  .btn-bg-default{
+    background-color:#f8f8f8;
+    border:1px solid #ddd;
+    color:#666;
+  }
+
+}

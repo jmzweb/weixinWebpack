@@ -1,0 +1,138 @@
+.refresh_position{
+  position: absolute;
+  right:.25rem;
+  font-size:14px;
+  color:#fff;
+  line-height: 1rem;
+}
+
+.position_succs{
+  margin-top:.3rem;
+  border:solid #ddd;
+  border-width: 1px 0;
+  background:#fff;
+  &:after{
+    content: '';
+    display: block;
+    clear:both;
+  }
+  .now_position{
+    float:left;
+    padding:.3rem 0 0 .5rem;
+    font-size:16px;
+    color:#666;
+    line-height: .6rem;
+    img{
+      width:.28rem;
+      height:.37rem;
+      vertical-align: middle;
+      margin:-.08rem .2rem  0 0;
+    }
+  }
+  .now_address{
+    position: relative;
+    float:right;
+    padding:.3rem .5rem;
+    ul{
+      &:after{
+        content: '';
+        display: block;
+        clear: both;
+      }
+      li{
+        max-width:2rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space:nowrap;
+        //word-break: keep-all;
+        float:left;
+        display: block;
+        font-size:16px;
+        color:#666;
+        line-height: .5rem;
+        a{
+          font-size:16px;
+          color:#666;
+          line-height: .5rem;
+        }
+        &:first-child{
+          width:2rem;
+          text-align: right;
+        }
+      }
+    }
+    img{
+      position: absolute;
+      z-index: 6;
+      bottom:.46rem;
+      right:.2rem;
+      width:.27rem;
+      height:.15rem;
+    }
+
+  }
+
+}
+
+.position_succs_info{
+  .position_succs_header{
+    padding:0 .25rem;
+    font-size:16px;
+    font-weight: normal;
+    line-height: .76rem;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    a{
+      font-size:16px;
+      float:right;
+      color:#6ea2ec;
+      line-height: .76rem;
+    }
+
+  }
+  ul{
+    width:100%;
+    background:#fff;
+    li{
+      @extend .position_succs_header;
+      line-height:.91rem;
+      color:#666;
+      a{
+        line-height:.91rem;
+      }
+
+    }
+  }
+}
+
+.chose_show_area{
+  position: absolute;
+  z-index: 9;
+  left:-40%;
+  top:0;
+  width:40%;
+  height:100%;
+  background:#fff;
+  border-right:1px solid #dddddd;
+  box-shadow: 0 0 2px 0 #d8e7ec;
+  header{
+    padding-left:0.25rem;
+    font-size:16px;
+    color:#676767;
+    line-height: 1rem;
+  }
+  ul{
+    padding-left:0.25rem;
+    li{
+      font-size:15px;
+      color:#999999;
+
+      &.active{
+        background:url("../images/bg-gou.png") no-repeat;
+        background-size: .24rem .16rem;
+        background-position: 90% center;
+      }
+
+    }
+  }
+}

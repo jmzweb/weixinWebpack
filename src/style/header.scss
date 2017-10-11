@@ -1,0 +1,42 @@
+$color:#6ea2ec;
+.myHeader{
+  position: fixed;
+  z-index: 6;
+  top:0;
+  right:0;
+  width:100%;
+  background:$color;
+  font-size:19px;
+  color:#fff;
+  height: .94rem;
+  line-height: .94rem;
+
+  text-align: center;
+
+  .btn-back{
+    position: absolute;
+    left:0.25rem;
+    display: block;
+    width:0.3rem;
+    z-index: 7;
+    img{
+      width:100%;
+    }
+  }
+  .btn-next{
+    position: absolute;
+    top:0;
+    right:0.25rem;
+    font-size:14px;
+    color:#fff;
+    display: block;
+    z-index: 999;
+    img{
+      width:100%;
+    }
+  }
+  .btn-next-width{
+    width:0.3rem;
+  }
+
+}

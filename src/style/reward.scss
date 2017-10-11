@@ -1,0 +1,489 @@
+@import "./send_success";
+$margin:0.26rem;
+$color1:#6ea2ec;
+.user_reward{
+  background:#78a8ed;
+  margin-top:-1.2rem;
+  padding:1.5rem 0 .6rem;
+  color:#fff;
+  text-align: center;
+  header{
+    font-size:15px;
+    strong{
+      padding-top:.3rem;
+      display: block;
+      font-size:45px;
+      font-weight: bold;
+    }
+  }
+  .user_item{
+    width:100%;
+    font-size:15px;
+    padding-top:.42rem;
+    text-align: center;
+    &:after{
+      content: '';
+      display: block;
+      clear: both;
+    }
+    strong{
+      display: inline-block;
+      padding-top:.1rem;
+    }
+  }
+}
+
+.withdrawal-details{
+  position: relative;
+  margin-top:-.4rem;
+  background:#78a8ed;
+  padding:.4rem .25rem;
+  p{
+    font-size:14px;
+    color:#fff;
+    strong{
+      font-size:24px;
+      font-weight: bold;
+    }
+    &:nth-child(2){
+      margin:.1rem 0;
+    }
+
+  }
+  .mark{
+    position: absolute;
+    right:.25rem;
+    top:.32rem;
+    font-size:14px;
+    color:#fff;
+  }
+}
+
+.reward_btn{
+  margin-top:1.4rem;
+}
+.reward_info{
+  margin:.5rem .65rem 0;
+  list-style: decimal outside;
+  font-size:13px;
+  color:#ababab;
+  li{
+    //line-height: .4rem;
+    padding-bottom: .08rem;
+  }
+}
+.reward_pic{
+  width:100%;
+  padding:.25rem 0;
+  //position: absolute;
+  //bottom: .2rem;
+  text-align: center;
+  a{
+    //text-align: center;
+    font-size:13px;
+    color:#6ea2ec;
+  }
+}
+
+//奖励明细
+.rewward_detail_change{
+  margin-top:-1rem;
+  padding:.5rem 0 0;
+  ul{
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    &:after{
+      content:'';
+      display: block;
+      clear:both;
+    }
+    li{
+      font-size:16px;
+      color:#666;
+      line-height: .84rem;
+      text-align: center;
+      width:50%;
+      float:left;
+      &.active{
+        color:#fff;
+        background:url("../images/changes-detail-type.png") no-repeat;
+        background-size:cover;
+      }
+    }
+
+  }
+}
+.rewward_detail_content{
+  header{
+    padding:0 .25rem;
+    font-size:15px;
+    color:#333;
+    line-height: .76rem;
+  }
+  ul{
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    background:#fff;
+    padding-left:.25rem;
+    li{
+      border-bottom: 1px solid #ddd;
+      &:after{
+        content: '';
+        display: block;
+        clear: both;
+      }
+      &:last-child{
+        border:0;
+      }
+
+      .date-time{
+        float:left;
+        font-size:16px;
+        color:#999;
+        width:1.04rem;
+        padding:.35rem 0;
+        time{
+          padding-top:.1rem;
+          font-size:12px;
+          display: block;
+        }
+      }
+      .time_reward_ltem{
+        position: relative;
+        margin-left:1.07rem;
+        padding:.35rem 0;
+        img{
+          float:left;
+          width:.84rem;
+          height:.84rem;
+        }
+        div{
+          margin-left:.84rem+.41rem;
+          h3{
+            font-size:20px;
+            color:#333;
+          }
+          p{
+            font-size:15px;
+            color:#666;
+          }
+        }
+        .mark{
+          position: absolute;
+          right:.25rem;
+          top:0.35rem;
+          font-size:13px;
+          color:#999;
+          .active{
+            color:#ff7e15;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+//申请提现
+.apply_for_cash{
+  &:not(:first-child){
+    margin-top:.35rem;
+  }
+  background:#fff;
+  border:solid #e7e7e7;
+  border-width: 1px 0;
+  font-size:15px;
+  color:#696969;
+  line-height: 1.1rem;
+  span{
+    display: inline-block;
+    float:right;
+    text-align: right;
+    &.bd_mark{
+      color:#aaa;
+    }
+  }
+  a{
+    padding:0 .25rem;
+    width:100%;
+    display: inline-block;
+    font-size:15px;
+    color:#696969;
+    line-height: 1.1rem;
+    &:last-child{
+      border-top: 1px solid #e5e5e5;
+    }
+    &:first-child{
+      border:0;
+    }
+    margin-top:0;
+  }
+}
+
+//提现明细
+.cash_detail{
+  &.refresh_cash_detail{
+    padding-top:.5rem;
+  }
+  border:solid #e7e7e7;
+  border-width: 0px 0 1px ;
+  margin-top:-1rem;
+  padding:1rem 0 0;
+  background:#fff;
+  >a{
+    text-align: center;
+    display: inline-block;
+    width:100%;
+    font-size:14px;
+    color:#858585;
+  }
+  h3{
+    text-align: center;
+    font-size:34px;
+    padding:.4rem 0 .2rem;
+    small{
+      display: block;
+      text-align: center;
+      font-size:14px;
+      font-weight:normal;
+      color:#999999;
+      &.active{
+        color:#ff7e15;
+      }
+    }
+  }
+  .cash_detail_apply_time{
+    padding-left: .25rem;
+    padding-bottom: .25rem;
+    header{
+      font-size:15px;
+      color:#ccc;
+      line-height: .6rem;
+      border-bottom: 1px solid #ededed;
+      margin-top:.78rem;
+      span{
+        float:right;
+        padding-right:.25rem;
+      }
+    }
+    a{
+      @extend header;
+      display: inline-block;
+      width:100%;
+      border:0;
+      margin-top:0;
+    }
+  }
+}
+.cash_detail_bg{
+  padding-right:.25rem;
+  a{
+    background: url("../images/right_jiantou.png") no-repeat right center;
+    background-size:.15rem .26rem ;
+    &:last-child{
+      border:0;
+    }
+
+  }
+}
+.cash_remark{
+  padding-left:.25rem;
+  h3{
+    font-size:16px;
+    padding-top:.4rem;
+    line-height:.4rem ;
+  }
+  a{
+    border-bottom: 1px solid #e7e7e7;
+    padding-left:0;
+    line-height:.9rem ;
+    padding-top:.1rem;
+    &:last-child{
+      //border-bottom: 1px solid #e7e7e7;
+      border:0;
+    }
+  }
+}
+
+//
+.award_detail{
+  border:solid #e7e7e7;
+  border-width: 1px 0;
+  li{
+    border-bottom: 1px solid #e7e7e7;
+    &:last-child{
+      border:0;
+    }
+    &:after{
+      content: '';
+      display: block;
+      clear: both;
+    }
+    background: #fff;
+    padding:0.25rem .5rem;
+    h3{
+      float:left;
+      font-size:16px;
+      color:#333;
+      font-weight: normal;
+      time{
+        display: block;
+        font-size:12px;
+        color:#999999;
+      }
+    }
+    span{
+      display: block;
+      float:right;
+      font-size:16px;
+      color:#ff7e15;
+      font-weight: bold;
+      line-height: .8rem;
+    }
+  }
+}
+
+//
+.sell_detail{
+  h3{
+    font-size:22px;
+    padding-bottom: .1rem;
+  }
+  a{
+    padding-bottom: .1rem;
+  }
+  padding-bottom: .3rem;
+}
+
+.take_photo{
+  .take-appeal-info{
+    font-size:15px;
+    font-weight: normal;
+    text-indent: 1.5em;
+    color:#666;
+  }
+  &.take-margin{
+    margin-top:.5rem;
+  }
+  div{
+    background:#fff url("../images/appeal-image.png") no-repeat;
+    background-position: center center;
+    background-size: .79rem .93rem;
+    width:5.8rem;
+    height:5.8rem;
+    border:1px dashed #cdcdcd;
+    font-size:17px;
+    text-align: center;
+    margin:0.3rem auto 0.24rem;
+    color:#cccccc;
+    overflow: hidden;
+    img{
+      width:100%;
+      height:5.8rem;
+    }
+    a{
+      display:inline-block;
+      width:100%;
+      font-size:14px;
+      color:#d6d6d6;
+      padding-top:3.5rem;
+    }
+
+  }
+  .sell_detail_remark{
+    display: block;
+    width:5.8rem;
+    margin:0 auto;
+    font-size:14px;
+    color:#ccc;
+  }
+
+  .complaint-note-div{
+    height: 3.4rem;
+  }
+  .complaint-note{
+    display: block;
+    width:100%;
+    height:3.4rem;
+    overflow: auto;
+    padding:.25rem;
+    resize:none;
+    outline: none;
+    border:0;
+    font-size:14px;
+  }
+}
+
+//申请提现按钮
+.btn_for_cash{
+  width:100%;
+  text-align: center;
+  margin-top:.4rem;
+  .add_market{
+    width:90%;
+    line-height:$margin*4;
+    display: inline-block;
+    font-size:17px;
+    color:#fff;
+    background-color:$color1;
+    border-radius: 0.15rem;
+    img{
+      width:0.32rem;
+      height:0.32rem;
+      vertical-align: middle;
+      padding-right:0.1rem;
+      margin-top:-3px;
+    }
+  }
+  .btn_back{
+    margin-top:.48rem;
+    @extend .add_market;
+    background: #fff;
+    color:#666;
+    border:1px solid #e7e7e7;
+    box-sizing: border-box;
+    border-radius: 0.15rem;
+  }
+  .btn_default{
+    background: $color1;
+    color:#fff;
+
+  }
+  .type_to_change {
+    width: 100%;
+    padding-top: .6rem;
+    a {
+      font-size: 14px;
+      color: #6ea2ec;
+    }
+  }
+}
+
+//提现明细，备注
+.widthdrawal-footer{
+  padding:.25rem;
+  font-size:12px;
+  color:#999;
+  span{
+    vertical-align:top;
+    display: inline-block;
+    width:85%;
+  }
+}
+
+//奖励说明
+.article_style{
+  position: absolute;
+  left:0;
+  top:1.2rem;
+  width:100%;
+  height:10.5rem;
+  overflow: auto;
+  padding:0 .25rem;
+  p{
+    line-height: .4rem;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: .2rem;
+  }
+}

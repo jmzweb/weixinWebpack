@@ -1,0 +1,87 @@
+@import './send_success.scss';
+
+
+.saoma-sn{
+  background: #fff;
+  text-align: center;
+  padding:1.2rem 0 .8rem;
+  margin-top:-1rem;
+  h3{
+    font-size:24px;
+    font-weight: normal;
+    line-height: .5rem;
+    small{
+      display: block;
+      font-size:15px;
+      color:#ccc;
+    }
+  }
+
+  p{
+    margin-top:.25rem;
+    font-size:15px;
+    color:#ccc;
+  }
+}
+
+.saoma-camera-pic{
+  width:5.8rem;
+  height:5.8rem;
+  background: #fff;
+  border:1px dotted #cfcfcf;
+  margin:0.4rem auto 0;
+  overflow: hidden;
+  .sn-pic{
+    width:100%;
+    height:5.8rem;
+  }
+  @extend .infoToAdd;
+  dl{
+    dt{
+      img{
+        width:.68rem;
+        height:.68rem;
+      }
+    }
+    dd{
+      margin:.3rem .25rem 0;
+      color:#ccc;
+    }
+  }
+}
+
+
+//
+.manual_input{
+  width:100%;
+  height:1rem;
+  border:solid #cfcfcf;
+  border-width: 1px 0;
+  background:#fff;
+  padding:0 .25rem;
+  span{
+    float:left;
+    display: inline-block;
+    //width:.25rem;
+    font-size:17px;
+    color:#666;
+    //height:1rem;
+    line-height: .96rem;
+    overflow: hidden;
+  }
+  .contant_input{
+    margin-left:.7rem;
+    height: .98rem;
+    input{
+      font-size:15px;
+      color:#666;
+      height:.8rem;
+      line-height: .7rem;
+      width:100%;
+    }
+  }
+
+}
+
+
+

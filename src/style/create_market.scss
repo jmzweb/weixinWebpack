@@ -1,0 +1,226 @@
+.create-market{
+  margin-top:0.27rem;
+
+  background:#fff;
+  border: solid #ddd;
+  border-width: 1px 0;
+  header{
+    padding:.25rem;
+    background: url("../images/positioning.png") no-repeat .25rem .25rem;
+    background-size: .32rem .44rem;
+    font-size:16px;
+    color:#333;
+    text-indent: 2em;
+    &.market-type{
+      padding:.25rem;
+      background:url("../images/market-type-icon.png") no-repeat .25rem .25rem;
+      background-size: .44rem .44rem;
+      border-bottom: 0;
+      &.market-timo-type{
+        background:url("../images/market-timo-type.png") no-repeat .25rem .25rem;
+        background-size: .44rem .44rem;
+        border-bottom:1px solid #ddd;
+      }
+      img{
+        width:.26rem;
+        height:.15rem;
+        float:right;
+        vertical-align: middle;
+        margin-top:.2rem;
+      }
+    }
+    &.market-picture{
+      padding:.25rem;
+      background: url("../images/market-picture-icon.png") no-repeat .25rem .25rem;
+      background-size: .44rem .42rem;
+      border-bottom: 1px solid #ddd;
+    }
+    small{
+      font-size:12px;
+      float:right;
+      max-width: 5rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space:nowrap;
+      text-align: right;
+      padding-top:.08rem;
+    }
+  }
+  .input-next{
+    padding:0 .25rem .25rem 1rem;
+    input{
+      width:100%;
+      border-bottom: 1px solid #ddd;
+    }
+  }
+  .market-name{
+    float:left;
+    width:.44rem;
+    height:.44rem;
+    padding:.25rem;
+
+    & + div{
+      margin:.25rem .25rem .25rem 1rem ;
+      //margin-right:.25rem ;
+      border-bottom: 1px solid #ddd;
+      input{
+        width:100%;
+      }
+    }
+  }
+  .market_file_pic{
+    overflow:hidden;
+    margin:.5rem 0.25rem;
+    li{
+      float:left;
+      width:47%;
+      height:7.5rem*.47;
+      border-radius: .15rem;
+      background:#ccc url("../images/picture-chose-icon.png") no-repeat;
+      background-position: center center;
+      background-size: .79rem .93rem;
+      margin:0 .1rem;
+      overflow: hidden;
+      text-align: center;
+      .txt{
+        display: inline-block;
+        width:100%;
+        font-size:14px;
+        color:#fff;
+        padding-top: 2.5rem;
+      }
+      img{
+        width:100%;
+        height:7.5rem*.47;
+      }
+    }
+  }
+
+}
+//店铺类型
+.chose_market_type{
+  background:#fff;
+  padding-left:.5rem;
+  max-height:10rem;
+  overflow: auto;
+  &::-webkit-scrollbar{
+    display: none;
+  }
+  .chose_market_type_item{
+    font-size:16px;
+    color:#333;
+    text-indent: .5em;
+    line-height: .88rem;
+    border-bottom:1px solid #e7e7e7;
+    &:last-child{
+      border-bottom:0;
+    }
+    &>label{
+      display: inline-block;
+      width:95%;
+      border:1px solid red;
+    }
+    .radio-style{
+      float:right;
+      display: inline-block;
+      width:.83rem;
+      height:.83rem;
+      background: url("../images/radio-icon.png") no-repeat;
+      background-size: .83rem 1.76rem;
+      border-bottom: 0;
+    }
+    input[type=radio]:checked{
+      display: none;
+      &+.radio-style{
+        background-position:0 -.85rem;
+      }
+    }
+    //
+  }
+}
+
+// 大屏幕
+
+.big-screem{
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height:100%;
+  top:0;
+  //background:rgba(0,0,0,.4);
+  .content{
+    position: absolute;
+    width: 100%;
+    background:#fff;
+    bottom:0;
+    header{
+      position: relative;
+      padding:.1rem .25rem;
+      background: #e0e0e0;
+      text-align: center;
+      font-size:14px;
+      line-height: .5rem;
+      a{
+        position: absolute;
+        right:0.25rem;
+        float:right;
+        font-size:14px;
+        color:#89b3ef;
+        line-height: .5rem;
+      }
+    }
+    .main_check_content{
+      width: 100%;
+      position: relative;
+      background:#fff;
+      height:5rem;
+      overflow: auto;
+      h3{
+        font-size:14px;
+        text-indent: 1em;
+        padding:.23rem .25rem .1rem;
+        color:#333;
+        border-bottom: 1px solid #e0e0e0;
+      }
+      .checkbox{
+        &:after{
+          content: '';
+          display: block;
+          clear: both;
+        }
+        padding:.25rem;
+        li{
+          float:left;
+          margin:.1rem;
+          width:30%;
+          font-size:14px;
+          color:#333;
+          border:1px solid #e7e7e7;
+          border-radius: .1rem;
+          text-align: center;
+          line-height: .6rem;
+          overflow: hidden;
+          label{
+            display: inline-block;
+            width:100%;
+          }
+          input+label{
+            display: inline-block;
+            width:100%;
+          }
+          input:checked+label{
+            background: #89b3ef;
+            color:#fff;
+          }
+
+        }
+      }
+    }
+
+  }
+
+}
+
+.picker-item{
+  font-size:16px;
+}

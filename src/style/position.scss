@@ -1,0 +1,32 @@
+$margin:0.26rem;
+$color1:#6ea2ec;
+.positioning{
+  width:100%;
+  text-align: center;
+  margin-top:3rem;
+  dl{
+    dt{
+      margin-top:1.1rem;
+      img{
+        width:.96rem;
+        height:1.37rem;
+      }
+    }
+    dd{
+      margin-top:.74rem;
+      font-size:14px;
+      color:#999;
+      img{
+        width:.29rem;
+        height:.29rem;
+        vertical-align: middle;
+        margin-top:-3px;
+        margin-right:.1rem;
+      }
+      a{
+        color: $color1;
+      }
+    }
+  }
+}
+

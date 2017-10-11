@@ -1,0 +1,49 @@
+.container{
+  padding:1.3rem 0 0;
+}
+.problem-nav{
+  position: fixed;
+  left:0;
+  top:.92rem;
+  width:100%;
+  overflow: hidden;
+  border-bottom: 1px solid #dddddd;
+  box-shadow: 0 0 1px 0 #ddd;
+  li{
+    width:50%;
+    float:left;
+    text-align: center;
+    background:#f5f5f9;
+    a{
+      font-size:16px;
+      line-height: 1rem;
+      color:#858585;
+    }
+    &.active{
+      background:#89b3ef;
+      a{
+        color:#fff;
+      }
+    }
+  }
+}
+
+.show-problem{
+  width:100%;
+  margin-top:.6rem;
+  height: 10rem;
+  border: 0;
+}
+.show-problem-next{
+  overflow: auto;
+  padding:0 .25rem;
+  .show-problem-list{
+    margin-top:.2rem;
+    font-size:14px;
+    color:#666;
+    .show-problem-list-title{
+      color:#333;
+      font-weight:bold;
+    }
+  }
+}

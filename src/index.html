@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="auther" content="sougou IT progress"/>
+    <meta name="description" content="watch,H5,child"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!--移动web页面自动探测电话号码-->
+    <meta name="format-detection"  content="telephone=no">
+    <meta  http-equiv="x-rim-auto-match" content="none">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#e9476c-translucent">
+    <title>搜狗糖猫之家</title>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=750){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<!--<script src="https://cdn.bootcss.com/react/15.6.1/react.min.js"></script>-->
+<!--<script src="https://cdn.bootcss.com/react/15.6.1/react-dom.min.js"></script>-->
+
+<!--<script src="./bundle.js"></script>-->
+</body>
+</html>

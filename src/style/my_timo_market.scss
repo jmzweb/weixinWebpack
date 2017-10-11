@@ -1,0 +1,152 @@
+$margin:0.26rem;
+$color:#eb716f;
+$color1:#6ea2ec;
+$colorBg:#78a8ed;
+
+.timo_market{
+  background:$colorBg;
+  padding-left:.54rem;
+  padding-top:.74rem;
+  margin-top: -.4rem;
+  .timo_sell_user{
+    border-bottom:1px solid rgba(255,255,255,.4);
+    h3{
+      font-size:17px;
+      font-weight:inherit;
+      color:#fff;
+      padding-bottom: .2rem;
+      &:after{
+        content: '';
+        display: block;
+        clear: both;
+      }
+      small{
+        float:right;
+        font-size:12px;
+        color:#fff;
+        line-height: .6rem;
+        padding-right:.25rem;
+        a{
+          @extend small;
+        }
+      }
+    }
+    .mark{
+      width:100%;
+      overflow: hidden;
+      span{
+        float:right;
+        padding-right:.5rem;
+        color:#fff;
+        font-size:14px;
+        line-height: .75rem;
+      }
+    }
+  }
+  .now_address{
+    padding:.45rem 0;
+    div{
+      text-indent:1.5em;
+      font-size:14px;
+      color:#fff;
+      line-height: .56rem;
+      address{
+        @extend div;
+        font-style:normal;
+      }
+      &:first-child{
+        background:url("../images/market_white_position.png") no-repeat;
+        background-size:.27rem .31rem ;
+        background-position: left center;
+      }
+    }
+  }
+  .now_buss{
+    padding:.1rem 0;
+    border-top:1px solid rgba(255,255,255,.4);
+    font-size:14px;
+    color:#fff;
+    padding-top: .3rem;
+    padding-bottom: .5rem;
+    a{
+      font-size:14px;
+      color:#fff;
+    }
+  }
+
+}
+.timo_market_picture{
+  ul{
+    padding:0.25rem .25rem 0;
+    &:after{
+      content:'';
+      display: block;
+      clear: both;
+    }
+    li{
+      float:left;
+      width:47%;
+      height:1.9rem;
+      border-radius: .2rem;
+      overflow: hidden;
+      img{
+        width:100%;
+      }
+      &:first-child{
+        margin-right:5%;
+      }
+    }
+  }
+}
+
+.management{
+  background:#fff;
+  margin-top:.5rem;
+  ul{
+    li{
+      padding:0 .5rem;
+      font-size:16px;
+      color:#6ea2ec;
+      line-height: .95rem;
+      border-bottom:1px solid #ddd;
+      background:url('../images/management.png') no-repeat;
+      background-size:.56rem 2.86rem;
+      overflow:hidden;
+      text-indent: 1.2em;
+      &:first-child{
+        border-top:1px solid #ddd;
+      }
+    }
+    @for $i from 0 through 2 {
+      .item-#{$i} { background-position:.2rem -1.0rem*$i; }
+    }
+    .item-0{
+      background-position:.2rem -0.06rem;
+    }
+  }
+}
+
+.btn-group-management{
+  width:100%;
+  text-align: center;
+  margin:.5rem 0;
+
+  .btn{
+    width:90%;
+    line-height:$margin*4 ;
+    display: inline-block;
+    font-size:17px;
+    color:#fff;
+    background-color:$color1;
+    border-radius: 0.15rem;
+  }
+  .btn-small{
+    width:40%;
+  }
+  .btn-bg-default{
+    background-color:#f8f8f8;
+    border:1px solid #ddd;
+    color:#666;
+  }
+
+}

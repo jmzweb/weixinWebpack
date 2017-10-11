@@ -1,0 +1,54 @@
+@import "./header";
+.wode_detail_content{
+  position: absolute;
+  left:0;
+  top:1.2rem;
+  width:100%;
+  height:11rem;
+  overflow: auto;
+  padding:0 .25rem;
+  header{
+    padding:0 .25rem;
+    font-size:16px;
+    color:#333;
+    line-height: .7rem;
+    strong{
+      float:right;
+      color:#f19109;
+      font-weight: bold;
+    }
+  }
+  ul{
+
+    background: #fff;
+    li{
+      &:after{
+        content: '';
+        display: block;
+        clear: both;
+      }
+      @extend header;
+      border:solid #e0e0e0;
+      border-width: 1px 0 0;
+      padding:.25rem;
+      line-height:.4rem;
+      .date-time{
+        float:left;
+        time{
+          display: block;
+          color:#999;
+          font-size:12px;
+        }
+      }
+      .time_reward_ltem{
+        float:right;
+        line-height: .7rem;
+        font-size:14px;
+        color:#333;
+      }
+      &:last-child{
+        border-bottom-width: 1px;
+      }
+    }
+  }
+}
