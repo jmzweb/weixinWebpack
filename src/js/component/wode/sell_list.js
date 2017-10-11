@@ -26,13 +26,8 @@ class SellList extends React.Component{
 
     fetch(){
         reqwest({
-            url:`${teem.get('accessToke')}sell/sale_list`,
+            url:`${teem.get('accessToke')}/wx/sell/sale_list`,
             method:'post',
-            data:{
-                page:1,
-                limit:500,
-            },
-            contentType:'application/x-www-form-urlencoded;charset=utf-8',
         }).then(data=>{
             if(data.code === 0){
 

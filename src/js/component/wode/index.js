@@ -34,7 +34,7 @@ class SaleDate extends React.Component{
 
     handleExamine(){
         reqwest({
-            url:`${teem.get('accessToke')}user/query_shop?longitude=${this.props.params.j}latitude=${this.props.params.w}`,
+            url:`${teem.get('accessToke')}/wx/user/query_shop?longitude=${this.props.params.j}latitude=${this.props.params.w}`,
             method: 'get',
             type: 'json',
         }).then((data) => {

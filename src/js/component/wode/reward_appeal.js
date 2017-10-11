@@ -26,7 +26,7 @@ class RewardAppeal extends React.Component{
 
         if(serverId !== ''){
             reqwest({
-                url:`${teem.get('accessToke')}cash/sn_appeal`,
+                url:`${teem.get('accessToke')}/wx/cash/sn_appeal`,
                 method:'post',
                 data:{
                     SN:this.props.params.sn,

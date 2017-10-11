@@ -15,10 +15,8 @@ class RewardSellDetail extends React.Component{
             imgUrl:'http://userimage8.360doc.com/17/0130/21/35391316_201701302105480796169888.jpg',
             date:'',
             status:'',
-            amount:'',
             so_amount:'',
             active_amount:'',
-            cut_amount:'',
 
         };
 
@@ -30,22 +28,19 @@ class RewardSellDetail extends React.Component{
 
     fetch(){
         reqwest({
-            url:`${teem.get('accessToke')}sell/sn_detail`,
+            url:`${teem.get('accessToke')}/wx/sell/sn_detail`,
             method:'post',
             data:{
                 "SN":this.props.params.sn
-            },
-            contentType:'application/x-www-form-urlencoded;charset=utf-8',
+            }
         }).then(data=>{
             console.log(data);
             if(data.code === 0){
                 this.setState({
                     date:data.data.sellTime,
                     status:data.data.status,
-                    amount:data.data.amount/100,
                     so_amount:data.data.soAmount/100,
                     active_amount:data.data.activeAmount/100,
-                    cut_amount:data.data.cutAmount/100,
                     imgUrl:data.data.sellImage,
                 })
             }
@@ -106,6 +101,7 @@ class RewardSellDetail extends React.Component{
                 break;
         }
 
+
         return(
             <div className="container">
                 <header className="myHeader">
@@ -127,8 +123,8 @@ class RewardSellDetail extends React.Component{
                 <div className="apply_for_cash cash_remark">
                     <h3>奖励明细：</h3>
                     <a href="javascript:;">销售奖励金<span>{this.state.so_amount}元</span></a>
-                    <a href="javascript:;">激活奖励金<span>{this.state.active_amount-this.state.cut_amount}元</span></a>
-                    <a href="javascript:;">累计奖励金<span>{this.state.amount}元</span></a>
+                    <a href="javascript:;">激活奖励金<span>{this.state.active_amount}元</span></a>
+                    <a href="javascript:;">累计奖励金<span>{this.state.so_amount+this.state.active_amount}元</span></a>
                 </div>
                 <div className="take_photo" style={{paddingBottom:30}}>
                     <div><img src={this.state.imgUrl}/></div>

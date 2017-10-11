@@ -2,7 +2,7 @@
  * Created by jiminze on 2017/9/1.
  */
 
-//审批
+//店铺
 
 import React from 'react';
 import Reqwest from 'reqwest';
@@ -11,7 +11,7 @@ import '../../../../style/my_timo_market.scss';
 import './store_style.scss';
 import back from '../../../../images/back.png';
 
-export default class Approval extends React.Component{
+export default class PersonnelManagement extends React.Component{
 
     constructor(){
         super();
@@ -19,46 +19,40 @@ export default class Approval extends React.Component{
             //角色
             role:'123',
             //我的店铺的名字
-            lttile:'审批',
+            lttile:'人员管理',
             active:false,
             _data:[
                 {
-                    name:'物料申请：国美五道口',
-                    text:'展柜，X展架，海报',
-                    time:1507531109849,
+                    name:'李孝利',
+                    code:652712,
                     status:0,
                 },
                 {
-                    name:'物料申请：国美五道口',
-                    text:'展柜，X展架，海报',
-                    time:1507531109849,
+                    name:'李孝利',
+                    code:652713,
                     status:1,
                 },
                 {
-                    name:'物料申请：国美五道口',
-                    text:'展柜，X展架，海报',
-                    time:1507531109849,
-                    status:0,
+                    name:'李孝利',
+                    code:652714,
+                    status:2,
                 }
             ],
             _totalData:[
                 {
-                    name:'物料申请：国美五道口',
-                    text:'展柜，X展架，海报',
-                    time:1507531109849,
+                    name:'李孝利',
+                    code:652712,
                     status:0,
                 },
                 {
-                    name:'物料申请：国美五道口',
-                    text:'展柜，X展架，海报',
-                    time:1507531109849,
+                    name:'李孝利',
+                    code:652713,
                     status:1,
                 },
                 {
-                    name:'物料申请：国美五道口',
-                    text:'展柜，X展架，海报',
-                    time:1507531109849,
-                    status:0,
+                    name:'李孝利',
+                    code:652714,
+                    status:2,
                 }
             ],
         }
@@ -96,10 +90,13 @@ export default class Approval extends React.Component{
     trueStatus(pth){
         switch (pth){
             case 0:
-                return '审批';
+                return '在职';
                 break;
             case 1:
-                return '已审批';
+                return '离职';
+                break;
+            case 2:
+                return '调离';
                 break;
         }
     }
@@ -138,8 +135,7 @@ export default class Approval extends React.Component{
             <div className="person-manage-item">
                 <div className="person-manage-left">
                     <span>{obj.name}</span>
-                    <span>{obj.text}</span>
-                    <span>{obj.time}</span>
+                    <span>员工编号：{obj.code}</span>
                 </div>
                 <div className="person-manage-right" onClick={this.handleUserDetail.bind(this,obj.code)}>
                     <span>{this.trueStatus(obj.status)}</span>
@@ -154,8 +150,8 @@ export default class Approval extends React.Component{
                     <header className="myHeader"><a className="btn-back" href="javascript:;"><img src={back}/></a>{this.state.lttile}</header>
                     <nav className="person-manage-menu">
                         <ul onClick={this.handleTureMenu.bind(this)}>
-                            <li className={this.state.active?'active':''}><a href="javascript:;">待审批</a></li>
-                            <li className={!this.state.active?'active':''}><a href="javascript:;">已审批</a></li>
+                            <li className={this.state.active?'active':''}><a href="javascript:;">现有店员名单</a></li>
+                            <li className={!this.state.active?'active':''}><a href="javascript:;">历史店员名单</a></li>
                         </ul>
                     </nav>
                     <div className="person-manage-list">

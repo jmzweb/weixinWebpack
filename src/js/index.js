@@ -7,15 +7,15 @@
 
  */
 
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Router,Route,hashHistory,browserHistory} from "react-router";
+import {Router,Route,hashHistory,browserHistory,IndexRoute} from "react-router";
 import Main from  './component/main';
 import Login from  './component/login';
 import CreateMarket from './component/create_market';
 import GetLocation from './component/get_location';
 import MyTimeMarket from './component/my_timo_market';
-import MyTimemarket1 from './component/my_timo_market_1';
 import Position from './component/position';
 import Review from './component/review';
 import ReviewAward from './component/reward_award';
@@ -38,6 +38,16 @@ import SellList from './component/wode/sell_list';
 
 import Problem from './component/wode/problem/index';
 import Progress from './component/wode/progress/index';
+import Store from './component/wode/store/index';
+import StoreManager from './component/wode/store/store_manage_temple';
+import Inventory from './component/wode/store/inventory';
+import PersonnelManagement from './component/wode/store/personnel_management';
+import PersonnelManagementDetail from './component/wode/store/personnel_management_detail';
+import MaterialManagement from './component/wode/store/material_management';
+import MaterialBinding from './component/wode/store/material_binding';
+import MaterialDetail from './component/wode/store/material_detail';
+import MaterialWriteError from './component/wode/store/material_write_error';
+import MyTimemarket1 from './component/wode/store/my_timo_market_1';
 
 import reqwest from 'reqwest';
 import {hex_sha1} from './component/lib/sha1';
@@ -213,6 +223,18 @@ class Root extends React.Component {
                             <Route path="sellList" component={SellList}/>
                             <Route path="problem" component={Problem}/>
                             <Route path="progress" component={Progress}/>
+                            <Route path="store/">
+                                <Route path="index" component={Store}/>
+                                <Route path="storemanager/(:temple)" component={StoreManager}/>
+                                <Route path="inventory" component={Inventory}/>
+                                <Route path="personmanage" component={PersonnelManagement}/>
+                                <Route path="personmanagedetail/(:manage)" component={PersonnelManagementDetail}/>
+                                <Route path="materialmanage" component={MaterialManagement}/>
+                                <Route path="materialbinding" component={MaterialBinding}/>
+                                <Route path="materialdetail/(:mid)" component={MaterialDetail}/>
+                                <Route path="materialwrite" component={MaterialWriteError}/>
+                                <Route path="mytimemarket1" component={MyTimemarket1}/>
+                            </Route>
                         </Route>
                     </Route>
                 </Router>
