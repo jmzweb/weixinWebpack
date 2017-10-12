@@ -1,0 +1,41 @@
+{
+  "code":0,
+  "data":[
+    {
+      "id":0,
+      "area":"中华区",
+      "shopSum":222,
+      "notActiveSum":22,
+      "createSum":30
+    },
+    {
+      "id":1,
+      "area":"西北区",
+      "shopSum":222,
+      "notActiveSum":22,
+      "createSum":30
+    },
+    {
+      "id":2,
+      "area":"西南区",
+      "shopSum":222,
+      "notActiveSum":22,
+      "createSum":30
+    },
+    {
+      "id":3,
+      "area":"东北区",
+      "shopSum":222,
+      "notActiveSum":22,
+      "createSum":30
+    },
+    {
+      "id":4,
+      "area":"东南区",
+      "shopSum":222,
+      "notActiveSum":22,
+      "createSum":30
+    }
+  ]
+
+}

@@ -5,11 +5,14 @@
 //店铺
 
 import React from 'react';
-import Reqwest from 'reqwest';
+import reqwest from 'reqwest';
 import {Router,Route,hashHistory,browserHistory} from "react-router";
 import MyStore from './my_store';
 import ShopInspectionList from './shop_inspection_list';
 import ShopInspectionItem from './shop_inspection_item';
+import Teemo from '../../lib/page';
+
+const teem = new Teemo();
 
 export default class Store extends React.Component{
 
@@ -24,14 +27,24 @@ export default class Store extends React.Component{
     }
 
     componentWillMount(){
-        Reqwest({
-            url:``,
+
+    }
+
+    componentDidMount(){
+        reqwest({
+            url:`./json/jurisdiction.json`,
             method:`get`,
 
         }).then(data=>{
-            this.setState({
-                // role:data.data.role,
-            })
+
+            if(data.code ===0 || data.code === 200){
+
+                this.setState({
+                    role:data.data.userJurisdiction,
+                })
+
+            }
+
         })
     }
 
@@ -55,13 +68,13 @@ export default class Store extends React.Component{
     render(){
 
         const children =
-            this.state.role === 'users'
+            this.state.role === 0
                 ?
                 (
                     <MyStore lttile={this.state.lttile}/>
                 )
                 :
-                this.state.role === 'temple'
+                this.state.role === 1
                     ?
                     (
                         <ShopInspectionItem handleDetailFor={this.handleDetailFor.bind(this)}/>

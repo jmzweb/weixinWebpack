@@ -137,7 +137,7 @@ module.exports = function(options){
                     test: /\.((ttf|eot)(\?v=[0-9]\.[0-9]\.[0-9]))|(ttf|eot)$/,
                     loader: 'url?limit=10000&name=fonts/[hash:8].[name].[ext]'
                 },
-                {test: /\.json$/,loader: 'url?limit=10000&name=json/[name].json'},
+                {test: /\.json$/,loader: 'json-loader'},
                 {test: /\.css$/, loader: cssLoader},
                 {test: /\.scss$/, loader: sassLoader},
                 {test: /\.js|jsx$/, loader: "babel-loader",exclude: /node_modules/,query: {presets: ['es2015','react',"stage-2"]}}

@@ -1,3 +1,16 @@
+//
+.myStoreContainer{
+  margin-top:.8rem;
+  height:11rem;
+  overflow: auto;
+  -webkit-overflow-scrolling : touch;
+}
+//::-webkit-scrollbar{
+//  display: none;
+//};
+//
+
+
 .management{
   background:#fff;
   margin-top:.5rem;

@@ -182,6 +182,11 @@ class Root extends React.Component {
         }
         teem.set('href',url);
         teem.set('accessToke','http://m.teemo.cn/wx2/'); // http://a0.www.teemo.cn/wx/  上线地址： http://m.teemo.cn/wx2/
+
+
+        teem.set('jkhp','http://10.130.10.59:9090'); // http://a0.www.teemo.cn/wx/  上线地址： http://m.teemo.cn/wx2/
+
+
         teem.set('appId','wx353505bb820fcf88'); // wxf008db15f0cf1b7f  上线地址： wx353505bb820fcf88
 
         this.pageChange();
